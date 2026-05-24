@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies List</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feathers Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="movies">
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-logo">Ultra-Codex</a>
+
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="ultraman.html">Ultraman Info</a>
+        <a href="kaiju.html">Kaiju Info</a>
+        <a href="movies.html">Movies List</a>
+        <a href="about.html">About Me</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu">
+          <i data-feather="menu"></i>
+        </a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- List Movies Start -->
+    <section class="list">
+      <h2>Movie List</h2>
+
+      <div class="row">
+        <div class="card-list" data-target="shin-ultraman">
+          <img
+            src="img/shin_ultraman_movies.png"
+            alt="Shin Ultraman"
+            class="card-img"
+          />
+          <h3 class="card-title">- Shin Ultraman: A Special-Effects -</h3>
+
+          <div class="movie-tags">
+            <span class="tag tag-year">2022</span>
+            <span class="tag tag-age">13+</span>
+            <span class="tag tag-genre">Tokusatsu</span>
+          </div>
+        </div>
+
+        <div class="detail" id="shin-ultraman" hidden>
+          <img src="img/shin_ultraman_movies.png" alt="Shin Ultraman" />
+          <div class="card-preview">
+            <h2>Shin Ultraman: A Special-Effects</h2>
+            <p class="desc">
+                Jepang terus-menerus diserang oleh makhluk raksasa tak dikenal yang disebut "S-Class Species" (Kaiju). 
+                Pemerintah membentuk SSSP (S-Class Species Suppression Protocol) untuk menangani ancaman ini. 
+                Di tengah pertempuran sengit melawan monster Neronga, sesosok raksasa perak misterius jatuh dari langit dan menyelamatkan manusia. 
+                Namun, dalam kejadian itu, seorang analis SSSP bernama Shinji Kaminaga tewas secara tidak sengaja akibat benturan sang raksasa. 
+                Merasa bersalah, raksasa tersebut menyatukan jiwanya dengan Kaminaga untuk menebus kesalahannya sambil terus melindungi Bumi dari ancaman alien 
+                dan monster yang jauh lebih licik, termasuk konspirasi diplomatik antar galaksi yang mengancam eksistensi umat manusia.
+            </p>
+          </div>
+
+          <div class="movie-meta">
+            <span class="meta-tag">2022</span>
+            <span class="meta-tag">13+</span>
+            <span class="meta-tag">Tokusatsu</span>
+            <span class="meta-tag">113 menit</span>
+          </div>
+
+          <div class="card-info">
+            <p><strong>Sutradara</strong>Shinji Higuchi</p>
+            <p><strong>Tahun Rilis</strong>2022</p>
+            <p><strong>Durasi</strong>113 menit</p>
+            <p><strong>Genre</strong>Tokusatsu / Sci-Fi / Drama</p>
+            <p><strong>Rating</strong>⭐ 8.2 / 10</p>
+            <p><strong>Age Rating</strong>13+</p>
+
+            <h4>Review Singkat</h4>
+            <li>Pendekatan modern yang sangat cerdas. 
+                Menghilangkan elemen "kekanak-kanakan" dan menggantinya dengan intrik politik dan visual 
+                yang estetik namun tetap setia pada akar seri 1966.
+            </li>
+
+            <h4>Trailer</h4>
+            <li class="trailer-item">
+              <a
+                href="https://youtu.be/2XK23KGM-eA?si=f5vLLJsHDvGUJY0H"
+                target="_blank"
+                class="btn-trailer"
+              >
+                <i data-feather="youtube"></i>
+                Tonton Trailer
+              </a>
+            </li>
+          </div>
+        </div>
+
+        <div class="card-list" data-target="ultramantiga-movie">
+          <img
+            src="img/ultraman_tiga_movies.png"
+            alt="Ultramantiga movie"
+            class="card-img"
+          />
+          <h3 class="card-title">- Ultraman Tiga: The Final Odyssey -</h3>
+
+          <div class="movie-tags">
+            <span class="tag tag-year">2000</span>
+            <span class="tag tag-age">10+</span>
+            <span class="tag tag-genre">Action</span>
+          </div>
+        </div>
+
+        <div class="detail" id="ultramantiga-movie" hidden>
+          <img src="img/ultraman_tiga_movies.png" alt="Ultramantiga movie" />
+          <div class="card-preview">
+            <h2>Ultraman Tiga: The Final Odyssey</h2>
+            <p class="desc">
+                Dua tahun setelah kekalahan Gatanothor, Daigo Madoka bersiap untuk menikahi Rena. 
+                Namun, kedamaian terusik saat tim ekspedisi TPC tanpa sengaja membuka segel di reruntuhan kota kuno Luluie, 
+                membangkitkan tiga raksasa kegelapan: Camearra, Darramb, dan Hudra. 
+                Terungkap fakta mengejutkan bahwa di masa lalu yang sangat jauh, 
+                Ultraman Tiga sebenarnya adalah pemimpin mereka yang paling jahat sebelum akhirnya memilih jalan cahaya. 
+                Camearra, yang merupakan mantan kekasih Tiga, mencoba menarik kembali Daigo ke sisi kegelapan. 
+                Daigo harus bertarung tidak hanya melawan fisik para monster, 
+                tapi juga pergolakan batin dan beban sejarah gelap yang ia warisi untuk melindungi masa depan manusia.
+            </p>
+          </div>
+
+          <div class="movie-meta">
+            <span class="meta-tag">2000</span>
+            <span class="meta-tag">10+</span>
+            <span class="meta-tag">Action</span>
+            <span class="meta-tag">84 menit</span>
+          </div>
+
+          <div class="card-info">
+            <p><strong>Sutradara</strong>Hirochika Muraishi</p>
+            <p><strong>Tahun Rilis</strong>2000</p>
+            <p><strong>Durasi</strong>84 menit</p>
+            <p><strong>Genre</strong>Action / Sc-Fi / Fantasy </p>
+            <p><strong>Rating</strong>⭐ 7.5 / 10</p>
+            <p><strong>Age Rating</strong>10+</p>
+
+            <h4>Review Singkat</h4>
+            <li>Sebuah mahakarya drama dalam franchise Ultraman. 
+                Eksplorasi masa lalu yang kelam membuat karakter 
+                Tiga menjadi jauh lebih manusiawi dan ikonik.
+            </li>
+
+            <h4>Trailer</h4>
+            <li class="trailer-item">
+              <a
+                href="https://youtu.be/JxaPklbLOvk?si=1_FqEC8R3E9agtwd"
+                target="_blank"
+                class="btn-trailer"
+              >
+                <i data-feather="youtube"></i>
+                Tonton Trailer
+              </a>
+            </li>
+          </div>
+        </div>
+
+        <div class="card-list" data-target="ultra8brothers-movie">
+          <img
+            src="img/ultra_brothers_movie.png"
+            alt="Ultra8brothers movie"
+            class="card-img"
+          />
+          <h3 class="card-title">- Superior Ultraman 8 Brothers -</h3>
+
+          <div class="movie-tags">
+            <span class="tag tag-year">2008</span>
+            <span class="tag tag-age">10+</span>
+            <span class="tag tag-genre">Tokusatsu</span>
+          </div>
+        </div>
+
+        <div class="detail" id="ultra8brothers-movie" hidden>
+          <img src="img/ultra_brothers_movie.png" alt="Ultra8brothers movie" />
+          <div class="card-preview">
+            <h2>Superior Ultraman 8 Brothers</h2>
+            <p class="desc">
+                Daigo Madoka hidup di dunia paralel di mana Ultraman hanyalah karakter fiksi di televisi. 
+                Di dunia ini, ia bersahabat dengan Asuka (Dyna) dan Gamu (Gaia), 
+                yang semuanya hidup sebagai warga sipil biasa yang melupakan mimpi masa kecil mereka. 
+                Namun, fenomena aneh terjadi saat monster-monster mulai muncul di pelabuhan Yokohama. 
+                Daigo mulai mendapatkan penglihatan tentang tujuh pahlawan cahaya lainnya. 
+                Saat kehancuran mulai melanda, Daigo menyadari bahwa hanya dengan "percaya" pada keajaiban, 
+                mereka bisa membangkitkan kekuatan pahlawan dalam diri mereka. 
+                Film ini menyatukan 4 pahlawan era Heisei dengan 4 pahlawan legendaris era Showa (Ultraman, Seven, Jack, Ace) 
+                dalam satu pertempuran pamungkas untuk menyelamatkan realitas.
+            </p>
+          </div>
+
+          <div class="movie-meta">
+            <span class="meta-tag">2008</span>
+            <span class="meta-tag">10+</span>
+            <span class="meta-tag">Tokusatsu</span>
+            <span class="meta-tag">98 menit</span>
+          </div>
+
+          <div class="card-info">
+            <p><strong>Sutradara</strong>Takeshi Yagi</p>
+            <p><strong>Tahun Rilis</strong>2008</p>
+            <p><strong>Durasi</strong>98 menit</p>
+            <p><strong>Genre</strong>Sci-Fi / Tokusatsu / Crossover</p>
+            <p><strong>Rating</strong>⭐ 7.2 / 10</p>
+            <p><strong>Age Rating</strong>10+</p>
+
+            <h4>Review Singkat</h4>
+            <li>Film paling "feel good" yang pernah ada. 
+                Melihat para aktor veteran era 60-an kembali 
+                bertransformasi berdampingan dengan generasi baru adalah momen yang 
+                mengharukan bagi fans lintas generasi.
+            </li>
+
+            <h4>Trailer</h4>
+            <li class="trailer-item">
+              <a
+                href="https://youtu.be/HvGZYh-w65E?si=9y3UCB3ZU4lV_Yct"
+                target="_blank"
+                class="btn-trailer"
+              >
+                <i data-feather="youtube"></i>
+                Tonton Trailer
+              </a>
+            </li>
+          </div>
+        </div>
+
+        <div class="card-list" data-target="megamonster-movie">
+          <img
+            src="img/mega_monster_movie.png"
+            alt="Megamonster movie"
+            class="card-img"
+          />
+          <h3 class="card-title">- Mega Monster Battle: Ultra Galaxy
+            Legend The Movie -</h3>
+
+          <div class="movie-tags">
+            <span class="tag tag-year">2009</span>
+            <span class="tag tag-age">10+</span>
+            <span class="tag tag-genre">Action</span>
+          </div>
+        </div>
+
+        <div class="detail" id="megamonster-movie" hidden>
+          <img src="img/mega_monster_movie.png" alt="Megamonster movie" />
+          <div class="card-preview">
+            <h2>Mega Monster Battle: Ultra Galaxy
+                Legend The Movie
+            </h2>
+            <p class="desc">
+                Penjara Luar Angkasa yang dijaga ketat akhirnya jebol. 
+                Ultraman Belial, satu-satunya Ultra yang jatuh ke sisi gelap, 
+                berhasil kabur dengan bantuan Alien Zarab. 
+                Dengan membawa senjata Giga Battle Nizer, Belial menyerbu Planet Cahaya 
+                sendirian dan mengalahkan hampir seluruh populasi Ultra, termasuk para Ultra Brothers. 
+                Ia mencuri Plasma Spark, sumber energi utama yang membuat Planet Cahaya membeku seketika. 
+                Di sisi lain, seorang pemuda sombong bernama Zero sedang diasingkan dan dilatih oleh Ultraman Leo 
+                karena mencoba mencuri energi tersebut. Ketika alam semesta di ambang kehancuran, 
+                Zero harus membuktikan bahwa dirinya layak menjadi pahlawan dan menghentikan kegilaan Belial 
+                di pemakaman monster, Monster Graveyard.
+            </p>
+          </div>
+
+          <div class="movie-meta">
+            <span class="meta-tag">2009</span>
+            <span class="meta-tag">10+</span>
+            <span class="meta-tag">Action</span>
+            <span class="meta-tag">96 menit</span>
+          </div>
+
+          <div class="card-info">
+            <p><strong>Sutradara</strong>Koichi Sakamoto</p>
+            <p><strong>Tahun Rilis</strong>2009</p>
+            <p><strong>Durasi</strong>96 menit</p>
+            <p><strong>Genre</strong>Sci-Fi / Action / Space Opera</p>
+            <p><strong>Rating</strong>⭐ 7.1 / 10</p>
+            <p><strong>Age Rating</strong>10+</p>
+
+            <h4>Review Singkat</h4>
+            <li>Revolusi visual bagi Tsuburaya. 
+                Penuh dengan aksi bela diri, CGI yang masif pada masanya, 
+                dan memperkenalkan salah satu karakter paling populer 
+                sepanjang masa: Ultraman Zero.
+            </li>
+
+            <h4>Trailer</h4>
+            <li class="trailer-item">
+              <a
+                href="https://youtu.be/f8V8OnsA-ek?si=bgELH21jHEmkXHMG"
+                target="_blank"
+                class="btn-trailer"
+              >
+                <i data-feather="youtube"></i>
+                Tonton Trailer
+              </a>
+            </li>
+          </div>
+        </div>
+
+        <div class="card-list" data-target="ultramanzero-movie">
+          <img
+            src="img/revenge_belial_movie.png"
+            alt="Ultramanzero movie"
+            class="card-img"
+          />
+          <h3 class="card-title">- Ultraman Zero: The Revenge of Belial -</h3>
+
+          <div class="movie-tags">
+            <span class="tag tag-year">2010</span>
+            <span class="tag tag-age">10+</span>
+            <span class="tag tag-genre">Adventure</span>
+          </div>
+        </div>
+
+        <div class="detail" id="ultramanzero-movie" hidden>
+          <img src="img/revenge_belial_movie.png" alt="Ultramanzero movie" />
+          <div class="card-preview">
+            <h2>Ultraman Zero: The Revenge of Belial</h2>
+            <p class="desc">
+                Setelah kekalahannya, ternyata esensi Belial selamat dan melarikan diri ke dimensi lain yang dikenal sebagai "Another Space". 
+                Di sana, ia membangun kekaisaran robot raksasa dan menyebut dirinya Kaiser Belial, 
+                bertujuan untuk menambang kristal energi Emerald demi menguasai seluruh multiverse. 
+                Ultraman Zero dikirim sendirian oleh penduduk Planet Cahaya ke dimensi tersebut untuk menyelidiki ancaman ini. 
+                Di sana, ia bertemu dengan manusia bernama Run dan adiknya, Nao, serta para pejuang galaksi lainnya seperti Glenfire, 
+                Mirror Knight, dan Jean-Bot. Tanpa bantuan dari rumahnya, Zero harus membentuk aliansi baru (Ultimate Force Zero) 
+                untuk menghentikan pasukan robot Belial yang jumlahnya jutaan.
+            </p>
+          </div>
+
+          <div class="movie-meta">
+            <span class="meta-tag">2010</span>
+            <span class="meta-tag">10+</span>
+            <span class="meta-tag">Adventure</span>
+            <span class="meta-tag">100 menit</span>
+          </div>
+
+          <div class="card-info">
+            <p><strong>Sutradara</strong>Yuichi Abe</p>
+            <p><strong>Tahun Rilis</strong>2010</p>
+            <p><strong>Durasi</strong>100 menit</p>
+            <p><strong>Genre</strong>Sci-Fi / Adventure / Fantasy</p>
+            <p><strong>Rating</strong>⭐ 7.0 / 10</p>
+            <p><strong>Age Rating</strong>10+</p>
+
+            <h4>Review Singkat</h4>
+            <li>Skala ceritanya sangat luas. 
+                Film ini memperkenalkan konsep Multiverse secara lebih dalam dan memberikan dinamika tim yang segar 
+                lewat interaksi Zero dengan rekan-rekan non-Ultra nya.
+            </li>
+
+            <h4>Trailer</h4>
+            <li class="trailer-item">
+              <a
+                href="https://youtu.be/7EiboFFXIcI?si=COopnbch__9oBGNs"
+                target="_blank"
+                class="btn-trailer"
+              >
+                <i data-feather="youtube"></i>
+                Tonton Trailer
+              </a>
+            </li>
+          </div>
+        </div>
+
+        <div class="card-list" data-target="cosmosjustice-movie">
+          <img
+            src="img/cosmosvsjustice_movie.png"
+            alt="Cosmosjustice movie"
+            class="card-img"
+          />
+          <h3 class="card-title">- Ultraman Cosmos vs Ultraman Justice: The Final Battle -</h3>
+
+          <div class="movie-tags">
+            <span class="tag tag-year">2003</span>
+            <span class="tag tag-age">10+</span>
+            <span class="tag tag-genre">Tokusatsu</span>
+          </div>
+        </div>
+
+        <div class="detail" id="cosmosjustice-movie" hidden>
+          <img src="img/cosmosvsjustice_movie.png" alt="Cosmosjustice movie" />
+          <div class="card-preview">
+            <h2>ShiUltraman Cosmos vs Ultraman Justice: The Final Battle</h2>
+            <p class="desc">
+                Sebuah entitas kosmik yang sangat kuat bernama "Delusion" menganggap bahwa peradaban manusia di Bumi 
+                akan menjadi ancaman bagi kedamaian alam semesta di masa depan. Delusion mengirim Ultraman Justice ke Bumi 
+                untuk mengawasi proses pemusnahannya. Musashi (Cosmos) yang selalu percaya pada kasih sayang mencoba menghentikan 
+                Justice, namun Cosmos kalah telak dan menghilang. Ketika armada tempur raksasa Glandel mulai mendekati Bumi 
+                untuk melakukan "reset" total pada kehidupan, Justice mulai tersentuh oleh tekad manusia dan hewan peliharaan mereka yang tak mau menyerah. 
+                Justice akhirnya berbalik arah melawan tuannya sendiri demi melindungi Bumi, dan saat harapan hampir sirna, Cosmos kembali bangkit 
+                untuk bersatu dengan Justice menciptakan legenda baru.
+            </p>
+          </div>
+
+          <div class="movie-meta">
+            <span class="meta-tag">2003</span>
+            <span class="meta-tag">10+</span>
+            <span class="meta-tag">Tokusatsu</span>
+            <span class="meta-tag">75 menit</span>
+          </div>
+
+          <div class="card-info">
+            <p><strong>Sutradara</strong>Hirochika Muraishi</p>
+            <p><strong>Tahun Rilis</strong>2003</p>
+            <p><strong>Durasi</strong>75 menit</p>
+            <p><strong>Genre</strong>Tokusatsu / Sci-Fi / Drama</p>
+            <p><strong>Rating</strong>⭐ 6.8 / 10</p>
+            <p><strong>Age Rating</strong>10+</p>
+
+            <h4>Review Singkat</h4>
+            <li>Memiliki pesan moral yang sangat kuat tentang hak suatu spesies untuk hidup. 
+                Pertarungan puncaknya adalah salah satu yang paling epik karena melibatkan kehadiran Ultraman Legend 
+                yang dianggap sebagai dewa.</li>
+
+            <h4>Trailer</h4>
+            <li class="trailer-item">
+              <a
+                href="https://youtu.be/MXJbQmwmjXI?si=BWPjGodAKbNMiuIU"
+                target="_blank"
+                class="btn-trailer"
+              >
+                <i data-feather="youtube"></i>
+                Tonton Trailer
+              </a>
+            </li>
+          </div>
+        </div>
+
+        <div class="card-list" data-target="ultramantaiga-movie">
+          <img
+            src="img/taiga_movie.png"
+            alt="Ultramantaiga movie"
+            class="card-img"
+          />
+          <h3 class="card-title">- Ultraman Taiga The Movie: New
+            Generation Climax -</h3>
+
+          <div class="movie-tags">
+            <span class="tag tag-year">2020</span>
+            <span class="tag tag-age">10+</span>
+            <span class="tag tag-genre">Tokusatsu</span>
+          </div>
+        </div>
+
+        <div class="detail" id="ultramantaiga-movie" hidden>
+          <img src="img/taiga_movie.png" alt="Ultramantaiga movie" />
+          <div class="card-preview">
+            <h2>Ultraman Taiga The Movie: New
+                Generation Climax
+            </h2>
+            <p class="desc">
+                Hiroyuki Kudo, yang menjadi inang bagi tiga Ultraman (Taiga, Titas, Fuma), kini menjadi target utama oleh entitas jahat 
+                yang ingin menguasai Bumi. Situasi memburuk ketika ayah Taiga, sang legenda Ultraman Taro, tiba-tiba menyerang Bumi 
+                dalam kondisi yang tidak normal. Taro ternyata telah dikuasai oleh energi kegelapan dari Grimdo, 
+                monster kuno yang sangat kuat. Menghadapi krisis ini, seluruh pahlawan dari era New Generation (Ginga, Victory, X, Orb, Geed, Rosso, Blu, Grigio) 
+                berkumpul untuk membantu Taiga. Pertempuran keluarga antara ayah dan anak ini mencapai puncaknya ketika semua energi New Generation menyatu ke dalam tubuh Taiga 
+                untuk melahirkan wujud pahlawan terakhir yang sanggup menandingi kegelapan absolut.
+            </p>
+          </div>
+
+          <div class="movie-meta">
+            <span class="meta-tag">2020</span>
+            <span class="meta-tag">10+</span>
+            <span class="meta-tag">Tokusatsu</span>
+            <span class="meta-tag">71 menit</span>
+          </div>
+
+          <div class="card-info">
+            <p><strong>Sutradara</strong>Ryuichi Ichino</p>
+            <p><strong>Tahun Rilis</strong>2020</p>
+            <p><strong>Durasi</strong>71 menit</p>
+            <p><strong>Genre</strong>Tokusatsu / Sci-Fi / Action</p>
+            <p><strong>Rating</strong>⭐ 6.5 / 10</p>
+            <p><strong>Age Rating</strong>10+</p>
+
+            <h4>Review Singkat</h4>
+            <li>Film ini adalah perayaan sepuluh tahun era New Generation. 
+                Meski durasinya terasa cepat, intensitas pertarungannya sangat padat dengan teknik-teknik 
+                gabungan yang memanjakan mata.
+            </li>
+
+            <h4>Trailer</h4>
+            <li class="trailer-item">
+              <a
+                href="https://youtu.be/MvrAClBFHKA?si=oCvvi04KThuJzDlt"
+                target="_blank"
+                class="btn-trailer"
+              >
+                <i data-feather="youtube"></i>
+                Tonton Trailer
+              </a>
+            </li>
+          </div>
+        </div>
+
+        <div class="card-list" data-target="ultramandecker-movie">
+          <img
+            src="img/ultraman_decker_movie.png"
+            alt="Ultramandecker movie"
+            class="card-img"
+          />
+          <h3 class="card-title">- Ultraman Decker Finale: Journey to Beyond -</h3>
+
+          <div class="movie-tags">
+            <span class="tag tag-year">2023</span>
+            <span class="tag tag-age">10+</span>
+            <span class="tag tag-genre">Action</span>
+          </div>
+        </div>
+
+        <div class="detail" id="ultramandecker-movie" hidden>
+          <img src="img/ultraman_decker_movie.png" alt="Ultramandecker movie" />
+          <div class="card-preview">
+            <h2>Ultraman Decker Finale: Journey to Beyond</h2>
+            <p class="desc">
+                Setelah ancaman Sphere berhasil dimusnahkan dan Kanata kehilangan kemampuannya untuk berubah menjadi Decker, 
+                tim GUTS-Select kembali fokus pada rekonstruksi Bumi. Namun, ketenangan itu hancur saat Alien Zorugiku 
+                menyerang dengan teknologi suara yang mampu melumpuhkan sistem pertahanan manusia. 
+                Di tengah keputusasaan tanpa adanya Ultraman, seorang wanita misterius bernama Dinas muncul 
+                dengan membawa alat transformasi yang serupa dengan milik Kanata. Ia adalah seorang pejuang dari planet luar 
+                yang membawa harapan baru. Kanata dan timnya harus menemukan cara untuk bertarung di sisi Ultraman Dinas, 
+                membuktikan bahwa keberanian manusia adalah kekuatan yang sesungguhnya, bukan sekadar kekuatan dari luar angkasa.
+            </p>
+          </div>
+
+          <div class="movie-meta">
+            <span class="meta-tag">2023</span>
+            <span class="meta-tag">10+</span>
+            <span class="meta-tag">Action</span>
+            <span class="meta-tag">75 menit</span>
+          </div>
+
+          <div class="card-info">
+            <p><strong>Sutradara</strong>Masayoshi Takesue</p>
+            <p><strong>Tahun Rilis</strong>2023</p>
+            <p><strong>Durasi</strong>75 menit</p>
+            <p><strong>Genre</strong>Sci-Fi / Action / Drama</p>
+            <p><strong>Rating</strong>⭐ 6.7 / 10</p>
+            <p><strong>Age Rating</strong>10+</p>
+
+            <h4>Review Singkat</h4>
+            <li>Memberikan nuansa yang sedikit berbeda dengan memperkenalkan "Ultraman Decker". 
+                Film ini lebih menekankan pada pertumbuhan karakter Kanata pasca-seri dan arti dari sebuah tanggung jawab 
+                tanpa kekuatan super.
+            </li>
+
+            <h4>Trailer</h4>
+            <li class="trailer-item">
+              <a
+                href="https://youtu.be/HV332w_1yZE?si=f1dZUBI8BfvdcNi1"
+                target="_blank"
+                class="btn-trailer"
+              >
+                <i data-feather="youtube"></i>
+                Tonton Trailer
+              </a>
+            </li>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- List Movies End -->
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="footer-inner">
+        <div class="credit">
+          <p>Created by Jovan Sebastian W. | &copy; 2026. All rights reserved.</p>
+        </div>
+
+        <div class="footer-divider"></div>
+        
+        <div class="disclaimer">
+          <p>
+            This website is a personal, non-commercial project.
+            Ultraman and related works are the property of their
+            respective owners.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Feather Icon -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
