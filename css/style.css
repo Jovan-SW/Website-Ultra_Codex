@@ -602,13 +602,14 @@ body {
 }
 
 .list .row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 3.5rem;
-  margin-bottom: 70px;
-  justify-content: space-evenly;
-  gap: 24px;
-  padding: 0 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+  justify-items: center;
+  margin-bottom: 60px;
 }
 
 .card-title {
@@ -710,23 +711,18 @@ body {
 /* Responsive */
 @media (max-width: 1023px) {
   .list .row {
-    padding: 0 32px;
-    gap: 16px;
-  }
-  .card-list {
-    width: 140px;
+    padding: 1.5rem 32px 40px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 767px) {
   .list .row {
-    padding: 0 16px;
-    gap: 12px;
+    padding: 1rem 16px 32px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
-  .card-list {
-    width: 120px;
-    padding: 12px 10px;
-  }
+  
   .card-title {
     font-size: 10px;
     letter-spacing: 1.5px;
@@ -737,19 +733,25 @@ body {
 
 /* Card List */
 body.ultraman .card-list {
-  width: 300px;
-  background: linear-gradient(160deg, #0a0f1e 0%, #111827 60%, #0d1528 100%);
-  border-radius: 16px;
-  padding: 16px 12px 14px;
-  border: 1px solid rgba(79, 163, 255, 0.1);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  transition: all 0.35s ease;
-  overflow: hidden;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-}
+    width: 100%; 
+    max-width: 300px; 
+    background: linear-gradient(160deg, #0a0f1e 0%, #111827 60%, #0d1528 100%);
+    border-radius: 16px;
+    padding: 16px 12px 14px;
+    border: 1px solid rgba(79, 163, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    transition: all 0.35s ease;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; 
+  }
+
 
 /* Glow line atas */
 body.ultraman .card-list::before {
@@ -806,20 +808,22 @@ body.ultraman .card-list.active {
 /* Card Image */
 
 body.ultraman .card-img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: contain;
-  object-position: center;
-  border-radius: 10px;
-  padding: 8px;
-  margin-bottom: 12px;
-  background: radial-gradient(
-    ellipse at 50% 30%,
-    rgba(79, 163, 255, 0.12) 0%,
-    rgba(0, 0, 0, 0.7) 70%
-  );
-  transition: transform 0.35s ease, filter 0.35s ease;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+    background: radial-gradient(
+      ellipse at 50% 30%,
+      rgba(79, 163, 255, 0.12) 0%,
+      rgba(0, 0, 0, 0.7) 70%
+    );
+    border-radius: 10px;
+    padding: 8px;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+    transition: transform 0.35s ease, filter 0.35s ease;
+    width: 100%;            
+    aspect-ratio: 3/4;    
+    object-fit: contain;    
+    object-position: center;
+    margin-bottom: 12px;
+    display: block;         
+    box-sizing: border-box; 
 }
 
 body.ultraman .card-list:hover .card-img {
@@ -1077,18 +1081,23 @@ body.ultraman .btn-close-detail:hover {
 
 /* CARD LIST */
 body.kaiju .card-list {
-  width: 300px;
-  background: linear-gradient(160deg, #1a0000 0%, #1e0808 60%, #150005 100%);
-  border-radius: 16px;
-  padding: 16px 12px 14px;
-  border: 1px solid rgba(220, 40, 20, 0.1);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.03);
-  transition: all 0.35s ease;
-  overflow: hidden;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
+    width: 100%; 
+    max-width: 300px; 
+    background: linear-gradient(160deg, #0a0f1e 0%, #111827 60%, #0d1528 100%);
+    border-radius: 16px;
+    padding: 16px 12px 14px;
+    border: 1px solid rgba(220, 40, 20, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    transition: all 0.35s ease;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; 
 }
 
 /* Glow line atas */
@@ -1146,20 +1155,22 @@ body.kaiju .card-list.active {
 /* CARD IMAGE */
 
 body.kaiju .card-img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: contain;
-  object-position: center;
-  border-radius: 10px;
-  padding: 8px;
-  margin-bottom: 12px;
   background: radial-gradient(
     ellipse at 50% 30%,
     rgba(220, 40, 20, 0.12) 0%,
     rgba(0, 0, 0, 0.7) 70%
   );
-  transition: transform 0.35s ease, filter 0.35s ease;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+    border-radius: 10px;
+    padding: 8px;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+    transition: transform 0.35s ease, filter 0.35s ease;
+    width: 100%;            
+    aspect-ratio: 3/4;    
+    object-fit: contain;    
+    object-position: center;
+    margin-bottom: 12px;
+    display: block;         
+    box-sizing: border-box; 
 }
 
 body.kaiju .card-list:hover .card-img {
@@ -1902,7 +1913,6 @@ body.movies .btn-close-detail:hover {
   z-index: 0;
 }
 
-/* === WRAPPER === */
 .about-wrapper {
   position: relative;
   z-index: 1;
@@ -2173,7 +2183,7 @@ body.movies .btn-close-detail:hover {
 footer {
   background: #080808d5;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 50px 60px;
+  padding: 30px 60px;
   position: relative;
 }
 
@@ -2197,36 +2207,37 @@ footer::before {
   gap: 12px;
 }
 
-.footer-divider {
+.footer-inner .footer-divider {
   width: 40px;
   height: 1px;
   background: rgba(255, 255, 255, 0.15);
 }
 
-.credit p {
+.footer-inner .credit p {
   font-family: var(--font-heading);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.835);
   text-align: center;
   margin: 0;
 }
 
-.disclaimer p {
+.footer-inner .disclaimer p {
   font-family: var(--font-heading);
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.4);
   text-align: center;
   margin: 0;
   line-height: 2;
 }
 
+/* Responsive */
 @media (max-width: 767px) {
   footer {
-    padding: 32px 20px;
+    padding: 10px 30px;
   }
 }
