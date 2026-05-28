@@ -1764,48 +1764,6 @@ body.movies .modal-content .card-info li::before {
   font-size: 10px;
 }
 
-/* tombol trailer */
-.trailer-item {
-  grid-column: 1 / -1 !important;
-  background: none !important;
-  border: none !important;
-  padding: 4px 0 !important;
-}
-
-.trailer-item::before { content: none !important; }
-
-.btn-trailer {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.btn-trailer:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.45);
-  box-shadow: 0 0 16px rgba(255, 255, 255, 0.08);
-  transform: translateY(-1px);
-}
-
-.btn-trailer svg {
-  width: 15px;
-  height: 15px;
-  stroke: #fff;
-}
-
 /* CLOSE BUTTON */
 body.movies .btn-close-detail {
   position: absolute;
