@@ -1764,6 +1764,48 @@ body.movies .modal-content .card-info li::before {
   font-size: 10px;
 }
 
+/* TRAILER */
+body.movies .trailer-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+body.movies .trailer-section h4 {
+  font-family: var(--font-heading);
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.movies .trailer-section .vidio-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Rasio aspek 16:9 */
+    height: 0;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Mengatur Iframe Bawaan YouTube */
+body.movies .trailer-section .vidio-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;  
+    height: 100% !important; 
+    border: none;
+}
+
 /* CLOSE BUTTON */
 body.movies .btn-close-detail {
   position: absolute;
