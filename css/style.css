@@ -1586,7 +1586,7 @@ body.movies .card-list:hover .movie-tags {
 
 /*MODAL CONTAINER (movies)*/
 body.movies .modal-container {
-  position: fixed;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.92);
@@ -1707,7 +1707,7 @@ body.movies .modal-content .desc {
 /* info grid */
 body.movies .modal-content .card-info {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px 20px;
 }
 
@@ -1781,7 +1781,7 @@ body.movies .btn-close-detail {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  z-index: 10;
+  z-index: 9999;
 }
 
 body.movies .btn-close-detail:hover {
@@ -1827,6 +1827,15 @@ body.movies .btn-close-detail:hover {
 
   body.movies .modal-content .card-info {
     grid-template-columns: 1fr;
+  }
+
+  body.movies .btn-close-detail {
+    top: 10px; 
+    right: 10px;  
+    width: 32px;   
+    height: 32px;
+    background: rgba(0, 0, 0, 0.5); 
+    color: #fff;
   }
 }
 
