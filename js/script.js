@@ -40,13 +40,27 @@ modalContent.className = 'modal-content';
 modal.appendChild(modalContent);
 
 function openModal(detail) {
+  if (!detail) return;
   modalContent.innerHTML = detail.innerHTML;
+
+  // Reset iframe supaya video load ulang dengan benar
+  const iframe = modalContent.querySelector('iframe');
+  if (iframe) {
+    const src = iframe.getAttribute('src');
+    iframe.setAttribute('src', '');
+    iframe.setAttribute('src', src);
+  }
+
   modal.classList.add('active');
   overlay.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
+  // Stop video saat modal ditutup
+  const iframe = modalContent.querySelector('iframe');
+  if (iframe) iframe.setAttribute('src', '');
+
   modal.classList.remove('active');
   overlay.classList.remove('active');
   document.body.style.overflow = '';
