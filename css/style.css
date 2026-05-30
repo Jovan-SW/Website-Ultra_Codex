@@ -1422,20 +1422,18 @@ body.kaiju .btn-close-detail:hover {
 }
 
 /* Movie List */
-
 body.movies .list .row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
   padding: 2rem 60px 60px;
   margin-top: 0;
-  justify-content: unset;
 }
 
 /* Card List */
 body.movies .card-list {
   position: relative;
-  aspect-ratio: 3/4;
+  aspect-ratio: 3 / 4;
   border-radius: 6px;
   overflow: hidden;
   cursor: pointer;
@@ -1451,62 +1449,51 @@ body.movies .card-list {
 body.movies .card-list:hover {
   transform: scale(1.04);
   border-color: rgba(255, 255, 255, 0.28);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.1);
   z-index: 2;
 }
 
-/* hapus glow line atas */
+/* Hapus glow line atas */
 body.movies .card-list::before {
   display: none;
 }
 
-/* gradient gelap bawah card */
+/* Gradient gelap bawah card */
 body.movies .card-list::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  top: unset;
   height: 65%;
-  width: 100%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, transparent 100%);
   pointer-events: none;
-  border: none;
-  border-radius: 0;
-  opacity: 1;
-  transition: none;
 }
 
-/* Movie Img */
+/* Card Image */
 body.movies .card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  aspect-ratio: unset;
   border-radius: 0;
   padding: 0;
-  margin-bottom: 0;
+  margin: 0;
   background: none;
   filter: brightness(0.82) grayscale(0.1);
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-body.movies .card-list:hover .card-img {
+body.movies .card-list:hover .card-img,
+body.movies .card-list.active .card-img {
   filter: brightness(1) grayscale(0);
   transform: scale(1.03);
 }
 
-body.movies .card-list.active .card-img {
-  filter: brightness(1) grayscale(0);
-}
+/* Card Title */
 
-/* Judul Movie */
 body.movies .card-title {
   position: absolute;
-  bottom: 8px;
-  padding-bottom: 32px;
+  bottom: 0;
   left: 0;
   right: 0;
   z-index: 3;
@@ -1518,25 +1505,19 @@ body.movies .card-title {
   text-transform: uppercase;
   line-height: 1.4;
   margin: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
   transition: transform 0.3s ease;
 }
 
 body.movies .card-list:hover .card-title {
   transform: translateY(-4px);
-  color: #fff;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
 }
 
-body.movies .card-list.active .card-title {
-  color: #fff;
-  text-shadow: none;
-}
+/* Card Tag */
 
-/* tags card saat di hover*/
 body.movies .card-list .movie-tags {
   position: absolute;
-  bottom: 65px;
+  bottom: 40px;
   left: 10px;
   right: 10px;
   z-index: 3;
@@ -1545,7 +1526,7 @@ body.movies .card-list .movie-tags {
   gap: 4px;
   opacity: 0;
   transform: translateY(6px);
-  transition: all 0.3s ease 0.05s;
+  transition: opacity 0.3s ease 0.05s, transform 0.3s ease 0.05s;
 }
 
 body.movies .card-list:hover .movie-tags {
@@ -1567,26 +1548,41 @@ body.movies .card-list:hover .movie-tags {
   background: rgba(255, 255, 255, 0.18);
   border-color: rgba(255, 255, 255, 0.6);
   color: #ffffff;
-  text-shadow: 0 0 8px rgba(255,255,255,0.8);
 }
 
 .tag-age {
   background: rgba(255, 180, 0, 0.2);
   border-color: rgba(255, 180, 0, 0.7);
   color: #ffcc00;
-  text-shadow: 0 0 8px rgba(255,200,0,0.8);
 }
 
 .tag-genre {
   background: rgba(180, 230, 255, 0.12);
   border-color: rgba(180, 230, 255, 0.5);
   color: #b4e6ff;
-  text-shadow: 0 0 8px rgba(180,230,255,0.6);
 }
 
-/*MODAL CONTAINER (movies)*/
+/* Modal overlay */
+
+body.movies .modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+body.movies .modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Modal Container */
+
 body.movies .modal-container {
-  position: relative;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.92);
@@ -1602,22 +1598,37 @@ body.movies .modal-container {
   opacity: 0;
   pointer-events: none;
   transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
 }
 
+body.movies .modal-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+body.movies .modal-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body.movies .modal-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+/* Grid pattern background */
 body.movies .modal-container::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.02) 1px,
-      transparent 1px
-    ),
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 40px 40px;
   border-radius: 20px;
   pointer-events: none;
 }
 
+/* Glow line atas modal */
 body.movies .modal-container::after {
   content: "";
   position: absolute;
@@ -1625,7 +1636,7 @@ body.movies .modal-container::after {
   left: 10%;
   right: 10%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
 }
 
 body.movies .modal-container.active {
@@ -1634,22 +1645,25 @@ body.movies .modal-container.active {
   transform: translate(-50%, -50%) scale(1);
 }
 
-/* MODAL CONTENT  */
+/* Modal content */
+
 body.movies .modal-content {
   display: grid;
   grid-template-columns: 200px 1fr;
+  grid-template-rows: auto auto;
   gap: 36px;
   position: relative;
   z-index: 1;
 }
 
-/* gambar di modal */
+/* Poster di kolom kiri */
 body.movies .modal-content > img {
+  grid-column: 1;
+  grid-row: 1;
   width: 100%;
-  aspect-ratio: 2/3;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
   border-radius: 10px;
-  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.08));
   animation: imgGlowMovie 3s ease infinite alternate;
 }
 
@@ -1658,7 +1672,14 @@ body.movies .modal-content > img {
   to   { filter: drop-shadow(0 0 24px rgba(255, 255, 255, 0.18)); }
 }
 
-/* judul film di modal */
+/* Info di kolom kanan */
+body.movies .modal-content .card-preview {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Modal Judul film */
+
 body.movies .modal-content .card-preview h2 {
   font-family: var(--font-heading);
   font-size: clamp(18px, 2.8vw, 34px);
@@ -1671,7 +1692,8 @@ body.movies .modal-content .card-preview h2 {
   text-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
 }
 
-/* meta tags (tahun, umur, genre, durasi) */
+/* Movie Meta Tag */
+
 .movie-meta {
   display: flex;
   flex-wrap: wrap;
@@ -1692,7 +1714,7 @@ body.movies .modal-content .card-preview h2 {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* sinopsis */
+/* Sinopsis */
 body.movies .modal-content .desc {
   font-family: var(--font-heading);
   font-size: 12px;
@@ -1704,7 +1726,8 @@ body.movies .modal-content .desc {
   margin-bottom: 24px;
 }
 
-/* info grid */
+/* Card info */
+
 body.movies .modal-content .card-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1721,6 +1744,7 @@ body.movies .modal-content .card-info p {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 6px;
   line-height: 1.6;
+  margin: 0;
 }
 
 body.movies .modal-content .card-info p strong {
@@ -1739,7 +1763,7 @@ body.movies .modal-content .card-info h4 {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.45);
   grid-column: 1 / -1;
-  margin-top: 8px;
+  margin: 8px 0 0;
   padding-bottom: 6px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -1764,12 +1788,15 @@ body.movies .modal-content .card-info li::before {
   font-size: 10px;
 }
 
-/* TRAILER */
+/* Trailer section */
+
 body.movies .trailer-section {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    width: 100%;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin-top: 10px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
 }
 
 body.movies .trailer-section h4 {
@@ -1778,35 +1805,35 @@ body.movies .trailer-section h4 {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.45);
-  grid-column: 1 / -1;
-  margin-top: 8px;
+  margin: 0 0 12px;
   padding-bottom: 6px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Video container 16:9 */
 body.movies .trailer-section .vidio-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Rasio aspek 16:9 */
-    height: 0;
-    background: #000;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Mengatur Iframe Bawaan YouTube */
 body.movies .trailer-section .vidio-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;  
-    height: 100% !important; 
-    border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-/* CLOSE BUTTON */
+/* Close Button */
+
 body.movies .btn-close-detail {
   position: absolute;
   top: 16px;
@@ -1834,17 +1861,26 @@ body.movies .btn-close-detail:hover {
   box-shadow: 0 0 14px rgba(255, 255, 255, 0.1);
 }
 
-/* RESPONSIVE  */
+/* Responsive 1023px */
 @media (max-width: 1023px) {
-
   body.movies .list .row {
     padding: 1.5rem 32px 40px;
     grid-template-columns: repeat(3, 1fr);
   }
+
+  body.movies .modal-container {
+    width: 92%;
+    padding: 44px 32px 36px;
+  }
+
+  body.movies .modal-content {
+    grid-template-columns: 170px 1fr;
+    gap: 28px;
+  }
 }
 
+/* Responsive 767px */
 @media (max-width: 767px) {
-  
   body.movies .list .row {
     padding: 1rem 16px 32px;
     grid-template-columns: repeat(2, 1fr);
@@ -1852,31 +1888,51 @@ body.movies .btn-close-detail:hover {
   }
 
   body.movies .modal-container {
-    padding: 40px 20px 24px;
     width: 95%;
     max-height: 90vh;
+    padding: 40px 20px 24px;
+    border-radius: 14px;
   }
 
+  /* Stack jadi 1 kolom */
   body.movies .modal-content {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   body.movies .modal-content > img {
-    width: 50%;
+    grid-column: 1;
+    grid-row: 1;
+    width: 55%;
     margin: 0 auto;
     display: block;
+  }
+
+  body.movies .modal-content .card-preview {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  body.movies .trailer-section {
+    grid-column: 1;
+    grid-row: 3;
   }
 
   body.movies .modal-content .card-info {
     grid-template-columns: 1fr;
   }
 
+  body.movies .modal-content .card-preview h2 {
+    font-size: clamp(16px, 5vw, 24px);
+    letter-spacing: 2px;
+  }
+
   body.movies .btn-close-detail {
-    top: 10px; 
-    right: 10px;  
-    width: 32px;   
+    top: 10px;
+    right: 10px;
+    width: 32px;
     height: 32px;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.6);
     color: #fff;
   }
 }
